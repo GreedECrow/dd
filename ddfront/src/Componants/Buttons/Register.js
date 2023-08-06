@@ -1,6 +1,6 @@
 import React, {Componant} from "React";
 import {toggleRegisterModel} from '../../js/actions/uiActions';
-import {connect} from "react-redux";
+import {connect} from "mongoose";
 
 const mapStateToProps = state => {
     return{
