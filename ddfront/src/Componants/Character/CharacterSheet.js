@@ -1,9 +1,3 @@
 import React from 'react'
 
-export default function CharacterSheet() {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+import Form from './Character/CharacterSheet';
