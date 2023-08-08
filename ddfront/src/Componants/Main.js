@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CharatcerSheet from "./Componants/header/header";
-import LoginButton from "./LogIn";
-import LogoutButton from "./LogOut";
-import Profile from "./Profile";
+import LoginButton from "./Componants/Buttons/LogIn";
+import LogoutButton from "./Componants/Buttons/LogOut";
+import LogoutButton from "./Componants/Buttons/RegisterButton";
+import Profile from "./Componants/Buttons/Profile";
 import CharatcerSheet from "./Componants/CharatcerSheet";
 import CharatcerSheet from "./Componants/footer/footer";
 
@@ -39,7 +40,10 @@ export default function Main() {
   };
 
   const handleUpdateCharacterSheet = async (CharacterSheet) => {
-    await axios.put(`http://localhost:9000/CharacterSheet/${CharacterSheet._id}`, CharacterSheet);
+    await axios.put(
+      `http://localhost:9000/CharacterSheet/${CharacterSheet._id}`,
+      CharacterSheet
+    );
     getCharacterSheet();
   };
 
