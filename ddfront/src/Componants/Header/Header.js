@@ -5,7 +5,7 @@ export default function Header() {
     <header>
       <div>
         <h1>FANTASY CHARACTERSHEET BUILDER</h1>
-        <nav class="drop">
+        <nav>
           <ul>
             <li>
               <a href="index.html">Home</a>
