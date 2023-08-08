@@ -1,22 +1,23 @@
-import { useState } from 'react';
-import ReactDOM from 'react-dom/client';
-;
-
+import { useState } from "react";
+import ReactDOM from "react-dom/client";
 function MyName() {
-    const [name, setName] = useState("");
+  const [name, setName] = useState("");
 
-    return (
-        <form>
-          <label>Enter your name:
-            <input
-              type="text" 
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-          </label>
-        </form>
-      )
-    }
+  return (
+    <form>
+      <label>
+        Enter your name:
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </label>
+    </form>
+  );
+}
 
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<MyName />)
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<MyName />);
+
+MyName();

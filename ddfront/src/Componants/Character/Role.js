@@ -5,7 +5,7 @@ function MyRole() {
   return (
     <form>
       <select onChange={(e) => setRace(e.target.value)}>
-        <option disabled selected value="Pick your Race">Pick your Race</option>
+        <option disabled selected value="Pick your Role">Pick your Role</option>
         <option value="Tank">Tank</option>
         <option value="DPS">DPS</option>
         <option value="Ranged DPS">Ranged DPS</option>
@@ -17,3 +17,5 @@ function MyRole() {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<MyRole />);
+
+MyRole();
