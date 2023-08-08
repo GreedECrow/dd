@@ -1,26 +1,22 @@
-import React from 'react';
+import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
+;
 
 function MyName() {
-  return (
-    <form>
-      <label>Enter your name:
-        <input type="text" />
-      </label>
-    </form>
-  )
-}
+    const [name, setName] = useState("");
 
-<div>  
-    <select>
-        <option value=>Pick your Race</option>
-        <option value=>Vampire</option>
-        <option value=>Warewolf</option>
-        <option value=>Witch</option>
-        <option value=>Zombie</option>
-        </select>
-    </div>
+    return (
+        <form>
+          <label>Enter your name:
+            <input
+              type="text" 
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label>
+        </form>
+      )
+    }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<MyName />);
-
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<MyName />)
