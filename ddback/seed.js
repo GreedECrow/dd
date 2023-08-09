@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-const dd = require("./sheets/sheets");
+const dd = require("./sheets/sheets.js");
 
 mongoose.connect(process.env.DATABASE_URL);
 
@@ -13,7 +13,7 @@ async function seed() {
     Alignment: "",
   });
 
-  console.log("Created a new movie");
+  console.log("Created a new character.");
   mongoose.disconnect();
 }
 

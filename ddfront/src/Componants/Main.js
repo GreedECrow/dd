@@ -9,14 +9,14 @@ import CharatcerSheet from "./Componants/CharatcerSheet";
 import CharatcerSheet from "./Componants/footer/footer";
 
 export default function Main() {
-  const [CharacterSheet, setCharacterSheet] = useState([]);
+  const [CharacterSheets, setCharacterSheet] = useState([]);
 
   useEffect(() => {
     getCharacterSheet();
   }, []);
 
   async function getCharacterSheet() {
-    let API = "http://localhost:9000/CharacterSheet";
+    let API = "http://localhost:9000/sheets";
     const result = await axios.get(API);
     console.log(result.data);
     setCharacterSheet(result.data);
@@ -24,25 +24,25 @@ export default function Main() {
 
   const handleAddCharacterSheet = async (newMovieFormData) => {
     const res = await axios.post(
-      "http://localhost:9000/CharacterSheet",
+      "http://localhost:9000/sheets",
       newMovieFormData
     );
-    setCharacterSheet([...CharacterSheet, res.data]);
+    setCharacterSheet([...CharacterSheets, res.data]);
   };
 
   const handleDelete = async (id) => {
     console.log("clicked");
     const res = await axios.delete(
-      `http://localhost:9000/CharacterSheet/${id}`
+      `http://localhost:9000/sheets/${id}`
     );
     console.log(res);
     getCharacterSheet();
   };
 
-  const handleUpdateCharacterSheet = async (CharacterSheet) => {
+  const handleUpdateCharacterSheet = async (CharacterSheets) => {
     await axios.put(
-      `http://localhost:9000/CharacterSheet/${CharacterSheet._id}`,
-      CharacterSheet
+      `http://localhost:9000/sheets/${CharacterSheets._id}`,
+      CharacterSheets
     );
     getCharacterSheet();
   };
@@ -52,7 +52,7 @@ export default function Main() {
       <Form onSubmitFunc={handleAddCharacterSheet} />
       <h3>This is my Main!</h3>
       <MovieCard
-        CharacterSheet={CharacterSheet}
+        CharacterSheets={CharacterSheets}
         handleDelete={handleDelete}
         handleUpdateCharacterSheet={handleUpdateCharacterSheet}
       />
