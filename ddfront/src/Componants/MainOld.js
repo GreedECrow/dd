@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import CharatcerSheet from "./Componants/header/header";
-import LoginButton from "./Componants/Buttons/LogIn";
-import LogoutButton from "./Componants/Buttons/LogOut";
-import LogoutButton from "./Componants/Buttons/RegisterButton";
-import Profile from "./Componants/Buttons/Profile";
-import CharatcerSheet from "./Componants/CharatcerSheet";
-import CharatcerSheet from "./Componants/footer/footer";
+//import LoginButton from "./Componants/Buttons/LogIn";
+//import LogoutButton from "./Componants/Buttons/LogOut";
+//import RegisterButton from "./Componants/Buttons/RegisterButton";
+//import Profile from "./Componants/Buttons/Profile";
+import CharacterSheet from "./Componants/CharacterSheet";
 
 export default function Main() {
   const [CharacterSheets, setCharacterSheet] = useState([]);
+  const [formData, setFormData] = useState({
+    name: "",
+    race: "",
+    role: "",
+    alignment: "",
+  });
 
   useEffect(() => {
     getCharacterSheet();
@@ -22,19 +26,14 @@ export default function Main() {
     setCharacterSheet(result.data);
   }
 
-  const handleAddCharacterSheet = async (newMovieFormData) => {
-    const res = await axios.post(
-      "http://localhost:9000/sheets",
-      newMovieFormData
-    );
+  const handleAddCharacterSheet = async () => {
+    const res = await axios.post("http://localhost:9000/sheets", formData);
     setCharacterSheet([...CharacterSheets, res.data]);
   };
 
   const handleDelete = async (id) => {
     console.log("clicked");
-    const res = await axios.delete(
-      `http://localhost:9000/sheets/${id}`
-    );
+    const res = await axios.delete(`http://localhost:9000/sheets/${id}`);
     console.log(res);
     getCharacterSheet();
   };
@@ -49,9 +48,8 @@ export default function Main() {
 
   return (
     <div>
-      <Form onSubmitFunc={handleAddCharacterSheet} />
       <h3>This is my Main!</h3>
-      <MovieCard
+      <CharacterSheet
         CharacterSheets={CharacterSheets}
         handleDelete={handleDelete}
         handleUpdateCharacterSheet={handleUpdateCharacterSheet}
