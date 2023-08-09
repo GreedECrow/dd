@@ -1,5 +1,6 @@
-import React, { Component, useEffect, useState } from "react";
+import "./Reset.css";
 import "./App.css";
+import React, { Component, useEffect, useState } from "react";
 import axios from "axios";
 import SheetCard from "./SheetCard/SheetCard";
 import Form from "./Form/Form";

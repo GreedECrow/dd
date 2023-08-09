@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "./Reset.css";
+import "./App.css";
 
 export default function Form({ onSubmitFunc, sheet }) {
   const [formData, setFormData] = useState(
@@ -59,6 +61,7 @@ export default function Form({ onSubmitFunc, sheet }) {
             We don't really have a label for it.
           </option>
         </select>
+        <button type="submit">{sheet ? "Update" : "Add Sheet"}</button>
       </form>
     </div>
   );

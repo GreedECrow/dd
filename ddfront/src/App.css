@@ -41,3 +41,42 @@ main {
     grid-template-rows: repeat(5, 1fr);
   }
 }
+
+Header {
+  width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 8rem;
+}
+
+nav{
+    font-size: x-large;
+}
+
+nav ul {
+    display: flex;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+nav ul li {
+    display: block;
+    text-align: center;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+div {
+  border: 2px solid black;
+}
+
+form {
+  border: 2px solid black;
+}
+
+Footer {
+  width: 100%;
+}

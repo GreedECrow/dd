@@ -1,5 +1,6 @@
-import React from "react";
+import "./Reset.css";
 import "./App.css";
+import React from "react";
 import Form from "../components/Form/Form";
 
 export default function CSheet() {
@@ -9,4 +10,4 @@ export default function CSheet() {
       <Form />
     </div>
   );
-}
+  }
