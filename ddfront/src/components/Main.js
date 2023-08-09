@@ -1,4 +1,5 @@
 import React, { Component, useEffect, useState } from "react";
+import "./App.css";
 import axios from "axios";
 import SheetCard from "./SheetCard/SheetCard";
 import Form from "./Form/Form";
@@ -39,7 +40,7 @@ export default function Main() {
 
   return (
     <div>
-    <h3>This a Sheet I guess, I don't even know anymore???</h3>
+      <h3>This a Sheet I guess, I don't even know anymore???</h3>
       <Form onSubmitFunc={handleAddSheet} />
       <SheetCard
         sheets={sheets}
