@@ -8,7 +8,7 @@ function MyRole() {
         <option disabled selected value="Pick your Role">Pick your Role</option>
         <option value="Tank">Tank</option>
         <option value="DPS">DPS</option>
-        <option value="Ranged DPS">Ranged DPS</option>
+        <option value="Black Mage">Ranged DPS</option>
         <option value="Healer">Healer</option>
       </select>
     </form>

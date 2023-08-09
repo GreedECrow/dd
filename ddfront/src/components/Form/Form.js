@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function Form({ onSubmitFunc, sheet }) {
-  const [forData, setFormData] = useState(
+  const [formData, setFormData] = useState(
     sheet ?? {
       Name: "",
       Race: "",
@@ -11,13 +11,13 @@ export default function Form({ onSubmitFunc, sheet }) {
   );
 
   const handleChange = (event) => {
-    setFormData({ ...FormData, [event.target.Name]: event.target.value });
+    setFormData({ ...formData, [event.target.Name]: event.target.value });
     console.log(formData);
   };
 
   const submit = (event) => {
     event.preventDefault();
-    onSubmitFunc(forData);
+    onSubmitFunc(formData);
   };
 
   return (

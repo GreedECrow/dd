@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 export default function Header() {
   return (
@@ -8,13 +10,13 @@ export default function Header() {
         <nav>
           <ul>
             <li>
-              <a href="index.html">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="CharacterSheet.js">Character Creator</a>
+              <Link to="/CSheet">Character Creator</Link>
             </li>
             <li>
-              <a href="SavedCharacters">Saved Characters</a>
+              <Link to="/SavedCSheet">Saved Characters</Link>
             </li>
           </ul>
         </nav>
