@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ReactDOM from "react-dom/client";
+
 function MyName() {
   const [name, setName] = useState("");
 
@@ -16,8 +17,3 @@ function MyName() {
     </form>
   );
 }
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<MyName />);
-
-MyName();

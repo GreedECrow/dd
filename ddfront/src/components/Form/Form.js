@@ -11,7 +11,7 @@ export default function Form({ onSubmitFunc, sheet }) {
   );
 
   const handleChange = (event) => {
-    setFormData({ ...formData, [event.target.Name]: event.target.value });
+    setFormData({ ...formData, [event.target.name]: event.target.value });
     console.log(formData);
   };
 
@@ -26,27 +26,39 @@ export default function Form({ onSubmitFunc, sheet }) {
         <input
           placeholder="Character Name"
           onChange={handleChange}
-          Name="Name"
+          name="Name"
           value={formData.Name}
         ></input>
-        <input
-          placeholder="Character Race"
-          onChange={handleChange}
-          Name="Race"
-          value={formData.Race}
-        ></input>
-        <input
-          placeholder="Character Role"
-          onChange={handleChange}
-          Name="Role"
-          value={formData.Role}
-        ></input>
-        <input
-          placeholder="Character Alignment"
-          onChange={handleChange}
-          Name="Alignment"
-          value={formData.Alignment}
-        ></input>
+        <select onChange={handleChange} name="Race">
+          <option disabled selected value="Pick your Race">
+            Pick your Race
+          </option>
+          <option value="Vampire">Vampire</option>
+          <option value="Warewolf">Warewolf</option>
+          <option value="Witch">Witch</option>
+          <option value="Zombie">Zombie</option>
+        </select>
+
+        <select onChange={handleChange} name="Role">
+          <option disabled selected value="Pick your Role">
+            Pick your Role
+          </option>
+          <option value="Tank">Tank</option>
+          <option value="DPS">DPS</option>
+          <option value="Black Mage">Ranged DPS</option>
+          <option value="Healer">Healer</option>
+        </select>
+        <select onChange={handleChange} name="Alignment">
+          <option disabled selected value="Pick your Alignment">
+            Pick your Alignment
+          </option>
+          <option value="Rebal Scum">Rebal Scum</option>
+          <option value="FOR THE FJORD!!">FOR THE FJORD!!</option>
+          <option value="Money Money Money">Money Money Money</option>
+          <option value="We don't really have a label for it.">
+            We don't really have a label for it.
+          </option>
+        </select>
       </form>
     </div>
   );

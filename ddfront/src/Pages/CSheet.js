@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
+import Form from "../components/Form/Form";
 
 export default function CSheet() {
   return (
-    <div>CSheet</div>
-  )
+    <div>
+      <p>Character Creator</p>
+      <Form />
+    </div>
+  );
 }

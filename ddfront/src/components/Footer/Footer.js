@@ -1,18 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
     <footer>
       <h2>Thanks for playing.</h2>
       <div>
-        <h1>FANTASY CHARACTERSHEET BUILDER</h1>
         <nav>
           <ul>
             <li>
-              <a href="AboutUs">About Us</a>
+            <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="Contact">Contact</a>
+            <Link to="/AboutUs">About Us</Link>
+            </li>
+            <li>
+            <Link to="/Contacts">Contacts</Link>
             </li>
           </ul>
         </nav>
