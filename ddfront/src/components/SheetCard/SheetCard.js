@@ -1,10 +1,10 @@
 import React from "react";
 import Form from "../Form/Form";
 
-export default function SheetCard({ sheet, handleDelete, handleUpdateSheet }) {
+export default function SheetCard({ sheets, handleDelete, handleUpdateSheet }) {
   return (
     <div>
-      {sheet.map((sheet) => {
+      {sheets.map((sheet) => {
         return (
           <div key={sheet.id}>
             <div>

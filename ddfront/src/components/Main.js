@@ -4,34 +4,34 @@ import SheetCard from "./SheetCard/SheetCard";
 import From from "./Form/Form";
 
 export default function Main() {
-    const [Sheet, setSheet] = useState([])
+    const [Sheets, setSheets] = useState([])
 
     useEffect(() => {
-        getSheet();
+        getSheets();
     },[])
 
-    async function getSheet(){
-        let API = "http://localhost:9000/sheet";
+    async function getSheets(){
+        let API = "http://localhost:9000/sheets";
         const result = await axios.get(API);
         console.log(result.data);
-        setSheet(result.data)
+        setSheets(result.data)
     }
     
     const handleAddSheet = async newSheetFromData => {
         const res = await axios.post("http://localhost:9000/sheet", newSheetFormData);
-        setSheet([...sheet, res.data])
+        setSheets([...sheets, res.data])
     }
 
     const handleDelete = async (id) => {
         console.log("clicked")
-        const res = await axios.delete(`http://localhost:9000/sheet/${id}`)
+        const res = await axios.delete(`http://localhost:9000/sheets/${id}`)
         console.log(res)
-        getSheet()
+        getSheets()
     }
 
     const handleUpdateSheet = async (sheet) => {
-        await axios.put(`http://localhost:9000/sheet/${sheet._id}`, sheet)
-        getSheet();
+        await axios.put(`http://localhost:9000/sheets/${sheet._id}`, sheet)
+        getSheets();
     }
 
     return (
