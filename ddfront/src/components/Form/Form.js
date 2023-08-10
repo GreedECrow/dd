@@ -38,14 +38,13 @@ export default function Form({ onSubmitFunc, sheet }) {
           <option value="Witch">Witch</option>
           <option value="Zombie">Zombie</option>
         </select>
-
         <select onChange={handleChange} name="Role">
           <option disabled selected value="Pick your Role">
             Pick your Role
           </option>
           <option value="Tank">Tank</option>
           <option value="DPS">DPS</option>
-          <option value="Black Mage">Ranged DPS</option>
+          <option value="Black Mage">Black Mage</option>
           <option value="Healer">Healer</option>
         </select>
         <select onChange={handleChange} name="Alignment">
@@ -59,7 +58,52 @@ export default function Form({ onSubmitFunc, sheet }) {
             We don't really have a label for it.
           </option>
         </select>
-        <button type="submit">{sheet ? "Update" : "Add Sheet"}</button>
+        <p>Pick Your Weapon</p>
+        <input type="radio" id="Axe" name="Weapon" value="Axe" />
+        <label for="Axe">Axe</label>
+
+        <input type="radio" id="Sword" name="Weapon" value="Sword" />
+        <label for="Sword">Sword</label>
+
+        <input type="radio" id="Wand" name="Weapon" value="Wand" />
+        <label for="Wand">Wand</label>
+
+        <input type="radio" id="Sandwich" name="Weapon" value="Sandwich" />
+        <label for="Sandwich">Sandwich</label>
+
+        <b />
+
+        <p>Pick Your Supplies</p>
+        <input type="radio" id="Food" name="Supplies" value="Food" />
+        <label for="Food">Food Stuffs</label>
+
+        <input type="radio" id="CatPics" name="Supplies" value="CatPics" />
+        <label for="CatPics">Cat Pictures</label>
+
+        <input type="radio" id="Souls" name="Supplies" value="Souls" />
+        <label for="Souls">Souls of the fallen</label>
+
+        <input type="radio" id="YuGiOh" name="Supplies" value="YuGiOh" />
+        <label for="YuGiOh">3 Blue Eyes White Dragon Cards</label>
+
+        <b />
+
+        <p>Pick Your ULTIMATE MOVE!!</p>
+        <input type="radio" id="MoonFall" name="ULT" value="MoonFall" />
+        <label for="MoonFall">Moon Fall</label>
+
+        <input type="radio" id="DuelWield" name="ULT" value="DuelWield" />
+        <label for="DuelWield">Duel Wield God Weapon</label>
+
+        <input type="radio" id="KAMEHAMEHA" name="ULT" value="KAMEHAMEHA" />
+        <label for="KAMEHAMEHA">KAMEHAMEHA</label>
+
+        <input type="radio" id="Summon" name="ULT" value="Summon" />
+        <label for="Summon"> Actually summon 3 Blue Eyes White Dragon</label>
+
+        <b />
+
+        <button type="submit">{sheet ? "Update" : "I have spoken!!"}</button>
       </form>
     </div>
   );

@@ -1,10 +1,9 @@
 import React from "react";
-import Form from "../Form/Form";
 
 export default function SheetCard({ sheets, handleDelete, handleUpdateSheet }) {
   return (
     <div>
-      {sheets.map((sheet) => {
+      {sheets?.map((sheet) => {
         return (
           <div key={sheet.id}>
             <div>
@@ -14,7 +13,7 @@ export default function SheetCard({ sheets, handleDelete, handleUpdateSheet }) {
                 {sheet.Race}, {sheet.Role}, {sheet.Alignment}
               </p>
             </div>
-            <Form onSubmitFunc={handleUpdateSheet} sheet={sheet} />
+            {/* {<Form onSubmitFunc={handleUpdateSheet} sheet={sheet} />} */}
           </div>
         );
       })}
