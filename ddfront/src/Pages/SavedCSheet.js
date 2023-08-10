@@ -1,9 +1,17 @@
-import "./Reset.css";
-import "./App.css";
-import React from 'react'
+import React from "react";
 
-export default function SavedCSheet() {
+export default function SavedCSheet({
+  sheets,
+  handleDelete,
+  handleUpdateSheet,
+}) {
   return (
-    <div>SavedCSheet</div>
-  )
+    <div>
+      <SheetCard
+        sheets={sheets}
+        handleDelete={handleDelete}
+        handleUpdateSheet={handleUpdateSheet}
+      />
+    </div>
+  );
 }

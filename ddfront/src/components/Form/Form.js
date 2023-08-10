@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import "./Reset.css";
-import "./App.css";
 
 export default function Form({ onSubmitFunc, sheet }) {
   const [formData, setFormData] = useState(

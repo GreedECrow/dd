@@ -1,13 +1,12 @@
-import "./Reset.css";
-import "./App.css";
+
 import React from "react";
 import Form from "../components/Form/Form";
 
-export default function CSheet() {
+export default function CSheet({handleAddSheet}) {
   return (
     <div>
       <p>Character Creator</p>
-      <Form />
+      <Form onSubmitFunc={handleAddSheet} />
     </div>
   );
   }
