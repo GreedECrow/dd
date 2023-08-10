@@ -4,7 +4,7 @@ import Form from "../components/Form/Form";
 export default function CSheet({ handleAddSheet }) {
   return (
     <div>
-      <p>Character Creator</p>
+      <h2>Character Creator</h2>
       <Form onSubmitFunc={handleAddSheet} />
     </div>
   );

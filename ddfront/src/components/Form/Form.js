@@ -58,7 +58,8 @@ export default function Form({ onSubmitFunc, sheet }) {
             We don't really have a label for it.
           </option>
         </select>
-        <p>Pick Your Weapon</p>
+
+        <h2>Pick Your Weapon</h2>
         <input type="radio" id="Axe" name="Weapon" value="Axe" />
         <label for="Axe">Axe</label>
 
@@ -71,9 +72,7 @@ export default function Form({ onSubmitFunc, sheet }) {
         <input type="radio" id="Sandwich" name="Weapon" value="Sandwich" />
         <label for="Sandwich">Sandwich</label>
 
-        <b />
-
-        <p>Pick Your Supplies</p>
+        <h2>Pick Your Supplies</h2>
         <input type="radio" id="Food" name="Supplies" value="Food" />
         <label for="Food">Food Stuffs</label>
 
@@ -86,9 +85,7 @@ export default function Form({ onSubmitFunc, sheet }) {
         <input type="radio" id="YuGiOh" name="Supplies" value="YuGiOh" />
         <label for="YuGiOh">3 Blue Eyes White Dragon Cards</label>
 
-        <b />
-
-        <p>Pick Your ULTIMATE MOVE!!</p>
+        <h2>Pick Your ULTIMATE MOVE!!</h2>
         <input type="radio" id="MoonFall" name="ULT" value="MoonFall" />
         <label for="MoonFall">Moon Fall</label>
 
@@ -100,8 +97,6 @@ export default function Form({ onSubmitFunc, sheet }) {
 
         <input type="radio" id="Summon" name="ULT" value="Summon" />
         <label for="Summon"> Actually summon 3 Blue Eyes White Dragon</label>
-
-        <b />
 
         <button type="submit">{sheet ? "Update" : "I have spoken!!"}</button>
       </form>

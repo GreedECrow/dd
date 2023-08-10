@@ -3,7 +3,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const bp = require("body-parser");
 require("dotenv").config();
-const DdSheets = require("./sheets/sheets")
+const DdSheets = require("./sheets/sheets");
 
 mongoose
   .connect(process.env.DATABASE_URL)
@@ -20,7 +20,6 @@ app.get("/", (request, response) => {
 });
 
 app.get("/sheets", async (request, response) => {
-  console.log(request);
   try {
     const sheets = await DdSheets.find();
     response.status(200).json(sheets);
@@ -39,7 +38,7 @@ app.post("/sheets", async (request, response) => {
   }
 });
 
-app.put("/sheetss/:id", async (request, response) => {
+app.put("/sheets/:id", async (request, response) => {
   console.log(request.params.id);
   try {
     await DdSheets.findByIdAndUpdate(request.params.id, request.body);
@@ -49,7 +48,7 @@ app.put("/sheetss/:id", async (request, response) => {
   }
 });
 
-app.delete("/sheetss/:id", async (request, response) => {
+app.delete("/sheets/:id", async (request, response) => {
   console.log(request);
   try {
     const id = request.params.id;

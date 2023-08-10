@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header>
       <div>
-        <h1>FANTASY CHARACTERSHEET BUILDER</h1>
+        <h1>FANTASY CHARACTER SHEET BUILDER</h1>
         <nav>
           <ul>
             <li>

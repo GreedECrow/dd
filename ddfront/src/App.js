@@ -26,7 +26,7 @@ function App() {
 
   const handleAddSheet = async (newSheetFormData) => {
     const res = await axios.post(
-      "http://localhost:9000/sheet",
+      "http://localhost:9000/sheets",
       newSheetFormData
     );
     setSheets([...sheets, res.data]);
