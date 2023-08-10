@@ -49,12 +49,11 @@ Header {
 }
 
 h1 {
-  text-align: center;
   color: white;
   font-size: 8rem;
 }
 
-h2{
+h2 {
   margin: 5px;
 }
 
@@ -97,11 +96,15 @@ select {
   margin: 5px;
 }
 
-input{
+section{
   margin: 5px;
 }
 
-label{
+input {
+  margin: 5px;
+}
+
+label {
   margin: 5px;
 }
 

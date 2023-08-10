@@ -29,6 +29,7 @@ export default function Form({ onSubmitFunc, sheet }) {
           name="Name"
           value={formData.Name}
         ></input>
+
         <select onChange={handleChange} name="Race">
           <option disabled selected value="Pick your Race">
             Pick your Race
@@ -38,6 +39,7 @@ export default function Form({ onSubmitFunc, sheet }) {
           <option value="Witch">Witch</option>
           <option value="Zombie">Zombie</option>
         </select>
+
         <select onChange={handleChange} name="Role">
           <option disabled selected value="Pick your Role">
             Pick your Role
@@ -47,6 +49,7 @@ export default function Form({ onSubmitFunc, sheet }) {
           <option value="Black Mage">Black Mage</option>
           <option value="Healer">Healer</option>
         </select>
+
         <select onChange={handleChange} name="Alignment">
           <option disabled selected value="Pick your Alignment">
             Pick your Alignment
@@ -59,6 +62,7 @@ export default function Form({ onSubmitFunc, sheet }) {
           </option>
         </select>
 
+        <section>
         <h2>Pick Your Weapon</h2>
         <input type="radio" id="Axe" name="Weapon" value="Axe" />
         <label for="Axe">Axe</label>
@@ -71,7 +75,9 @@ export default function Form({ onSubmitFunc, sheet }) {
 
         <input type="radio" id="Sandwich" name="Weapon" value="Sandwich" />
         <label for="Sandwich">Sandwich</label>
+        </section>
 
+        <section>
         <h2>Pick Your Supplies</h2>
         <input type="radio" id="Food" name="Supplies" value="Food" />
         <label for="Food">Food Stuffs</label>
@@ -84,7 +90,9 @@ export default function Form({ onSubmitFunc, sheet }) {
 
         <input type="radio" id="YuGiOh" name="Supplies" value="YuGiOh" />
         <label for="YuGiOh">3 Blue Eyes White Dragon Cards</label>
+        </section>
 
+        <section>
         <h2>Pick Your ULTIMATE MOVE!!</h2>
         <input type="radio" id="MoonFall" name="ULT" value="MoonFall" />
         <label for="MoonFall">Moon Fall</label>
@@ -97,6 +105,22 @@ export default function Form({ onSubmitFunc, sheet }) {
 
         <input type="radio" id="Summon" name="ULT" value="Summon" />
         <label for="Summon"> Actually summon 3 Blue Eyes White Dragon</label>
+        </section>
+
+        <section>
+        <h2>Pick Your WAR CRY!!</h2>
+        <input type="radio" id="WEASEL" name="WARCRY" value="WEASEL" />
+        <label for="WEASEL">I am WEASEL!!</label>
+
+        <input type="radio" id="Having" name="WARCRY" value="Having" />
+        <label for="Having">I'll Have What She's Having!!</label>
+
+        <input type="radio" id="World" name="WARCRY" value="World" />
+        <label for="World">Star Platinum, THE WARLDO!!</label>
+
+        <input type="radio" id="Leroy" name="WARCRY" value="Leroy" />
+        <label for="Leroy">LEEROY JENKIIIIIIIIIINS!!</label>
+        </section>
 
         <button type="submit">{sheet ? "Update" : "I have spoken!!"}</button>
       </form>
