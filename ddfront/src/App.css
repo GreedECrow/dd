@@ -37,7 +37,8 @@ main {
 }
 
 @media (min-width: 1200px) {
-body{  grid-template-columns: repeat(4, 1fr);
+  body {
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
   }
 }
@@ -83,6 +84,7 @@ nav ul li {
 div {
   border: 2px solid rgb(0, 58, 0);
   border-collapse: collapse;
+  color: white;
 }
 
 form {
@@ -95,7 +97,7 @@ select {
   margin: 5px;
 }
 
-section{
+section {
   margin: 5px;
 }
 

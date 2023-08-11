@@ -122,7 +122,7 @@ export default function Form({ onSubmitFunc, sheet }) {
         <label for="Leroy">LEEROY JENKIIIIIIIIIINS!!</label>
         </section>
 
-        <button type="submit">{sheet ? "Update" : "I have spoken!!"}</button>
+        <button type="submit">{sheet ? "Update" : "SUMMON!!"}</button>
       </form>
     </div>
   );

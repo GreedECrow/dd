@@ -9,6 +9,7 @@ import Main from "./components/Main";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CSheet from "./Pages/CSheet";
 import SavedCSheet from "./Pages/SavedCSheet";
+import Contacts from "./Pages/Contacts";
 
 function App() {
   const [sheets, setSheets] = useState([]);
@@ -48,24 +49,10 @@ function App() {
       <div className="App">
         <Header />
 
-        <section>
-          <article>
-            <p>
-              You can (probably not) find a more simple character creation tool
-              in the world today.
-              <br />
-              When you're ready, click the link above to find the "Character
-              "creator", you can't miss it.
-              <br />
-              When you've finished you find all the characters you have created
-              by clicking "Saved Charcters"
-            </p>
-          </article>
-        </section>
-        
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/Contacts" element={<Contacts />} />
           <Route
             path="/CSheet"
             element={<CSheet handleAddSheet={handleAddSheet} />}
@@ -81,7 +68,6 @@ function App() {
             }
           />
         </Routes>
-        
 
         <Footer />
       </div>
